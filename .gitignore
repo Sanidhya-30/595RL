@@ -1,1 +1,3 @@
 .*venv*/
+src/results
+src/outputs/saved_video
