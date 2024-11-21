@@ -1,0 +1,1 @@
+{"type": "Algorithm", "checkpoint_version": "1.1", "format": "cloudpickle", "state_file": "/tmp/tmpgijgg_tx/algorithm_state.pkl", "policy_ids": ["adversary_1", "adversary_2", "adversary_0", "agent_1", "adversary_3", "agent_0"], "ray_version": "2.8.0", "ray_commit": "105355bd253d6538ed34d331f6a4bdf0e38ace3a"}

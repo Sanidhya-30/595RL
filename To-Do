@@ -1,0 +1,21 @@
+// Code wise
+1. Modularize Calling models
+2. Check SAC
+3. Check PPO
+4. Check DQN
+5. Check MADDPG
+6. Save env configs in YAML
+7. Write Evaluation Scripts
+8. Write modular shell script
+
+// Project wise
+1. Determine which models to compare
+2. Determine evaluation parameters
+3. Go through Checkpoints config and results JSON for valuable data to be plotted
+4. Determine comparative analysis b/w (models, configs - vs Performance (reward[heatmap]))
+
+// Done
+1. Train.py ran and tested
+2. DDPG (as by Jayanth)
+3. Saving checkpoints
+4. Saving results
