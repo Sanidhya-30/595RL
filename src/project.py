@@ -11,7 +11,7 @@ import supersuit as ss
 
 
 def env_creator():
-    env = simple_tag_v3.parallel_env(num_good=2, num_adversaries=4, num_obstacles=2, max_cycles=25, continuous_actions=True)
+    env = simple_tag_v3.parallel_env(num_good=3, num_adversaries=5, num_obstacles=6, max_cycles=100, continuous_actions=True)
     env = ss.pad_observations_v0(env)
     env = ss.pad_action_space_v0(env)
     env = ss.frame_stack_v1(env, 3)
@@ -66,7 +66,7 @@ results = tune.run(
     "DDPG",
     config=config.to_dict(),
     stop=stop,
-    checkpoint_freq=10,
+    checkpoint_freq=1,
     checkpoint_at_end=True,
     local_dir="/local/scratch/a/jshreeku/ece595_reinforcement_learning/src/results", # for some reason, this has to be absoulte paths
     verbose=1,
