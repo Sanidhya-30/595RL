@@ -76,6 +76,11 @@ def get_config(args, env_name, env):
                 train_batch_size=args.batch_size,
                 gamma=args.gamma,
             )
+            .multi_agent(
+                policies={agent: (None, env.observation_space(agent), env.action_space(agent), {})
+                        for agent in env.possible_agents},
+                policy_mapping_fn=lambda agent_id, *args, **kwargs: agent_id,
+            )
         )
     elif args.model == "sac":
         config = (
@@ -155,7 +160,7 @@ def get_config(args, env_name, env):
 
 def train(args):
     ray.init(ignore_reinit_error=True,
-    num_cpus=8)
+    num_cpus=8, _temp_dir="/local/scratch/a/jshreeku/tmp/")
     num_gpus_available = ray.cluster_resources().get("GPU", 1)  
     print("Number of GPUS available: ", num_gpus_available) 
 
