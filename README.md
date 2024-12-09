@@ -2,6 +2,8 @@
 
 This repository contains code and resources for a project focused on multi agent object tracking and surveillance using deep reinforcement learning. The project is implemented in Python 3.11 and leverages key libraries such as Ray and PettingZoo.
 
+The following commands are for linux based system, for windows please create a conda environment for the project.
+
 ---
 
 ## Installation
@@ -44,7 +46,7 @@ Change the contents of your simple tag environment file located at your python3 
 
 ```bash
 cd ~/${user}/.local/lib/python3.xx
-cd site-packages/pettingzoomp/simple_tag
+cd site-packages/pettingzoo/mpe/simple_tag
 gedit simple_tag.py
 ```
 
@@ -74,6 +76,7 @@ with the contents of simple_tag_changes.py
 To train the model, use the `train.py` script. Navigate to the `src/` directory (or where the script is located) and execute:
 
 ```bash
+cd ~/595RL/src
 python train.py --model <model-name> [other arguments]
 ```
 
