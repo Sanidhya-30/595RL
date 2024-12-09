@@ -9,7 +9,7 @@ The following commands are for linux based system, for windows please create a c
 ## Installation
 
 ### Requirements
-1. Install **Python 3.11**. You can download it from [python.org](https://www.python.org).
+1. Install **Python 3.11.7**. You can download it from [python.org](https://www.python.org).
 2. Clone this repository:
    ```bash
    git clone https://github.com/JayanthShreekumar/595RL
@@ -17,9 +17,12 @@ The following commands are for linux based system, for windows please create a c
    git checkout Tag_San
    ```
 
-### Dependencies
+### Dependencies and Virtual Environment
 Install the required Python packages using `requirements.txt`:
 ```bash
+python -m venv .rl_venv
+source .rl_venv/bin/activate
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
@@ -63,6 +66,7 @@ with the contents of simple_tag_changes.py
 - **`plotting_results.ipynb`**: A Jupyter notebook for visualizing the performance metrics and results.
 - **`visualize_results.ipynb`**: A Jupyter notebook for exploring the model's behavior and intermediate results.
 - **`requirements.txt`**: Specifies all Python dependencies for the project.
+- **`sample_sbatch.sh`**: Example of how code was queued to run on high-performance cluster
 
 
 
@@ -73,12 +77,13 @@ with the contents of simple_tag_changes.py
 ## Usage
 
 ### 1. Training the Model
-To train the model, use the `train.py` script. Navigate to the `src/` directory (or where the script is located) and execute:
+To train the model, use the `train.py` script. Navigate to the root directory (or where the `src/` directory is located) and execute:
 
 ```bash
-cd ~/595RL/src
-python train.py --model <model-name> [other arguments]
+cd ~/595RL
+python src/train.py --model <model-name> [other arguments]
 ```
+Note that framework assumes access to at least 1 gpu and 1 cpus to complete training. If this is not the case the source code must be adjusted to use fewer resources. `sample_sbatch.sh` shows how this script was queued to run with designated resources.
 
 #### Required Argument:
 - `--model`: The RL algorithm to train. Options: `ppo`, `ddpg`, `sac`, `single_sac`.
