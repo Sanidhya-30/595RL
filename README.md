@@ -1,4 +1,4 @@
-# 595RL: Dynamic Obstacle Avoidance for Mobile Robots
+# 595RL: UAV Swarm Tracking With Multi-Agent RL
 
 This repository contains code and resources for a project focused on multi agent object tracking and surveillance using deep reinforcement learning. The project is implemented in Python 3.11 and leverages key libraries such as Ray and PettingZoo.
 
