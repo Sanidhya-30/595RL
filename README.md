@@ -112,6 +112,8 @@ Note that framework assumes access to at least 1 gpu and 1 cpus to complete trai
 python train.py --model ppo --num_good 3 --num_adversaries 5 --batch_size 2048
 ```
 
+![Train](https://github.com/Sanidhya-30/595RL/blob/main/media/traianing_dist.jpg?raw=true)
+
 
 ---
 
@@ -126,7 +128,7 @@ jupyter notebook visualize_results.ipynb
 
 This notebook helps analyze the intermediate results of the model during training.
 
-
+![Viz](https://github.com/Sanidhya-30/595RL/blob/main/media/RL.gif)
 ---
 
 ### 3. Plotting Performance Metrics
@@ -136,3 +138,12 @@ change the checkpoint_path to your respective results path
 ```bash
 jupyter notebook plotting_results.ipynb
 ```
+
+![Eval](https://github.com/Sanidhya-30/595RL/blob/main/media/trainingPPO.jpg?raw=true)
+
+
+<!--![PPO](https://github.com/Sanidhya-30/595RL/blob/main/media/train_ppo.jpg?raw=true)-->
+
+---
+
+## Find out the report at [link](https://github.com/Sanidhya-30/595RL/blob/main/media/ECE595___Reinforcement_Learning_Project.pdf)
